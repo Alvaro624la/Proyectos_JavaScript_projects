@@ -4,7 +4,8 @@
         // VARIABLES
         var fecha = new Date();
 
-        var dia = fecha.getDay();
+        var diaL = fecha.getDay();
+        var diaN = fecha.getDate();
         var mes = fecha.getMonth();
         var año = fecha.getFullYear();
         var hora = fecha.getHours();
@@ -22,8 +23,8 @@
         //CONSTANTES ARRAYS
         const SEMANA = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sábado"]
 
-        const MES = ['Diciembre', 'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre']
+        const MES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
+        'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 
         // CONDICIONALES
         if(hora < 10){hora = "0" + hora};
@@ -31,8 +32,8 @@
         if(segundos < 10){segundos = "0" + segundos};
 
         // AÑADIR CONTENIDO al documento
-        pDiaLetra.textContent = SEMANA[dia];
-        pDiaNumero.textContent = dia;
+        pDiaLetra.textContent = SEMANA[diaL];
+        pDiaNumero.textContent = diaN;
         pMes.textContent = MES[mes];
         pAño.textContent = año;
         pHora.textContent = hora;
