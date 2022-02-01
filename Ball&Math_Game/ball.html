@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <link rel="icon" href="https://img.icons8.com/external-flat-icons-pause-08/64/000000/external-abacus-education-flat-icons-pause-08.png">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Alvaro de Prado">
+    <meta name="description" content="Acierta las operaciones para dejar avanzar a la bola">
+
+    <link rel="author" href="https://www.linkedin.com/in/%C3%A1lvaro-de-prado-calle-740062221/">
+
+   <link href="ball.css" type="text/css" rel="stylesheet">
+
+    <!--GOOGLE FONTS (inputs): font-family: 'Lobster', cursive;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    
+    <!--GOOGLE FONTS (resultado): font-family: 'Josefin Sans', sans-serif;-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <title>Help let the ball finish</title>
+</head>
+<body id="body">
+    <header id="pizarra">
+        <form id="form" class="form" action="" method="post" autocomplete="off">
+            <div>
+                <input type="text" id="num1" class="inputs-num">
+                <input type="text" id="operador" class="inputs-operador">
+                <input type="text" id="num2" class="inputs-num">
+            </div>
+            <div>
+                <input type="text" id="resultado" class="inputs-resultado" placeholder="Escribe aquí el resultado">
+            </div>
+            <div>
+                <button type="submit" id="bt" class="bt">Evaluar</button>
+            </div>
+        </form>
+    </header>
+    <main id="main">
+        <div id="ball" class="ball"></div>
+
+        <!--PARA PRUEBAS:
+        <div id="box1" class="box-left no left-in-move left-yes-move left-out-move"></div>
+        <div id="box2" class="box-right yes right-yes-move"></div>
+        -->
+        
+        <!--CONTADOR DE VIDAS(cada vez que clique un resultado erroneo)-->
+        <!--VERSION MEJORADA: 
+            - En tres inputs que tiene la pizarra siempre, poner el resultado aleatoriamente en uno de ellos (porque si siempre es el de en medio por ejemplo, se acaba sabiendo), y tienen que clicar el correcto, si no, pierden vidas
+            - Generar automaticamente un fondo que ascienda dando efecto de movimiento cuando se acierta el resultado, y se autogenera cuando llega al final otra imagen igual, utilizando así 2 imagenes máximo y teniendi un fondo infinito-->
+    </main>
+    <script src="ball.js"></script>
+</body>
+</html>

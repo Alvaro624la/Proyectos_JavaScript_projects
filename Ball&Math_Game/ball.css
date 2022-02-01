@@ -1,0 +1,166 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+#body{
+    overflow: hidden;
+    position: relative;
+    background: linear-gradient(
+        90deg,
+        rgb(173, 173, 173),
+        #ffffff,
+        rgb(190, 190, 190)
+    );
+}
+.form{
+    display: grid;
+    place-items: center;
+    margin-top: 5%;
+}
+.inputs-num{
+    font-family: 'Lobster', cursive, Helvetica, sans-serif, Arial;
+    font-size: 1.25em;
+    text-align: center;
+    border: 0;
+    border-radius: 5px;
+    width: 50px;
+    height: 50px;
+    cursor: default;
+}
+.inputs-operador{
+    font-family: 'Lobster', cursive, Helvetica, sans-serif, Arial;
+    font-size: 2em;
+    text-align: center;
+    border: 1px solid black;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.inputs-resultado{
+    font-family: 'Lobster', cursive, Helvetica, sans-serif, Arial;
+    font-size: 1.25em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 135px;
+    height: 50px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px;
+}
+.bt{
+    font-family: 'Josefin Sans', sans-serif, Helvetica, sans-serif, Arial;
+    font-weight: 300;
+    font-size: 1.25em;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 8px 5px 5px 5px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.ball{
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    background: linear-gradient(
+        90deg, 
+        rgb(150, 0, 0),
+        rgb(230, 0, 0),
+        rgb(255, 0, 0),
+        rgb(230, 0, 0),
+        rgb(150, 0, 0)
+    );
+    box-shadow: 0px 0px 15px 1px rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    position: fixed;
+    top: calc(50% - (40px / 2));
+    left: calc(50% - (40px / 2));
+}
+.box-left{
+    position: absolute;
+    top: 100vh;
+    right: 50%;
+    /*left: calc(50% - 80px);*/
+    transition: top 2s linear;
+}
+.box-right{
+    position: absolute;
+    top: 100vh;
+    left: 50%;
+    transition: top 2s linear;
+}
+.no{
+    width: 80px;
+    height: 80px;
+    border: 4px groove rgb(110, 110, 110);
+    background-color: #000;
+    background: linear-gradient(
+        90deg,
+        rgb(0, 0, 0),
+        rgb(35, 35, 35),
+        rgb(70, 70, 70),
+        rgb(35, 35, 35), 
+        rgb(0, 0, 0)
+    );
+}
+.yes{
+    width: 80px;
+    height: 80px;
+    border: 4px groove rgb(0, 100, 0);
+    background-color: #000;
+    background: linear-gradient(
+        180deg, 
+        rgb(0, 138, 0),
+        rgb(0, 212, 0),
+        rgb(0, 255, 0),
+        rgb(0, 212, 0),
+        rgb(0, 138, 0)
+    );
+}
+
+.right-in-move{
+    position: absolute;
+    top: 58vh;
+    left: 50%;
+    transition: top 2s linear;
+}
+.left-in-move{
+    position: absolute;
+    top: 58vh;
+    right: 50%;
+    transition: top 2s linear;
+}
+
+.right-yes-move{
+    position: absolute;
+    top: 58vh;
+    left: 60%;
+    transition: all 2s;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+}
+.left-yes-move{
+    position: absolute;
+    top: 58vh;
+    right: 60%;
+    transition: all 2s;
+    transition-timing-function: cubic-bezier(0.64, 0, 0.78, 0);
+}
+
+.right-out-move{
+    position: absolute;
+    top: 8vh;
+    left: 100%;
+    transition: all 2s linear;
+}
+.left-out-move{
+    display: block;
+    position: absolute;
+    top: 8vh;
+    right: 100%;
+    transition: all 2s linear;
+}
+.eliminar{
+    display: none;
+}
