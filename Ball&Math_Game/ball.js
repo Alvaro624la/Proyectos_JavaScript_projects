@@ -78,10 +78,14 @@ function empezar() {
 
                             evaluar.style.backgroundColor = 'red';
                             resultado.style.border = '1px solid red';
+                            leftBox.classList.add('red');
+                            rightBox.classList.add('red');
         
                             function a() {
                                 evaluar.style.backgroundColor = 'white';
                                 resultado.style.border = '1px solid black';
+                                leftBox.classList.remove('red');
+                                rightBox.classList.remove('red');
 
                                 resultado.value = "";
                                 resultado.placeholder = "";
